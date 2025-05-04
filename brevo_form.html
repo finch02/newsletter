@@ -8,55 +8,21 @@
   <style>
     body {
       margin: 0;
-      padding: 1rem;
+      padding: 0;
       font-family: 'Inter', sans-serif;
       background: #fff;
-      color: #000;
       display: flex;
       justify-content: center;
+      align-items: flex-start;
     }
 
-    .wrapper {
+    .form-wrapper {
       width: 100%;
-      max-width: 520px;
-      background: #fff;
+      max-width: 540px;
       padding: 1rem;
+      box-sizing: border-box;
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .sib-form {
-      margin: 0;
-    }
-
-    /* Optional – Buttons & Inputs schöner machen */
-    input[type="text"], input[type="email"] {
-      width: 100%;
-      padding: 10px 12px;
-      margin-bottom: 0.6rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    input[type="checkbox"] {
-      margin-right: 8px;
-    }
-
-    button, input[type="submit"] {
-      background: #000;
-      color: white;
-      padding: 12px 18px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      width: 100%;
-      transition: background 0.2s;
-    }
-
-    button:hover, input[type="submit"]:hover {
-      background: #333;
     }
 
     .headline {
@@ -68,15 +34,15 @@
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="sib-form">
-      <p class="headline">Trage Dich ein und erfahre Neuigkeiten & Events zuerst!</p>
-      <!-- Dein echter Brevo-Form-Code: -->
-      <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
-      <div class="sib-form-container" data-type="subscription">
-        <!-- Hier 1:1 den Embed-Code von Brevo einfügen -->
-        <!-- ... -->
-      </div>
+  <div class="form-wrapper">
+    <div class="headline">
+      Trage Dich ein und erfahre Neuigkeiten & Events zuerst!
+    </div>
+
+    <!-- Brevo Embed (nicht verändern!) -->
+    <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
+    <div class="sib-form-container" data-type="subscription">
+      <!-- Füge hier deinen originalen Brevo-Code ein -->
     </div>
   </div>
 </body>
