@@ -2,61 +2,37 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Newsletter Anmeldung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 1rem;
-      background-color: #ffffff;
-      color: #000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    * {
+      box-sizing: border-box;
     }
 
-    h2 {
-      font-size: 1.2rem;
-      text-align: center;
-      margin-bottom: 1rem;
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+      margin: 0;
     }
 
     #sib-container {
-      max-width: 480px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
       width: 100%;
+      max-width: 460px;
     }
 
-    input, label {
-      font-size: 0.9rem;
-    }
-
-    input[type="text"],
-    input[type="email"] {
-      width: 100%;
-      padding: 0.6rem;
-      margin-top: 0.2rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    .sib-default-btn {
-      background-color: #000;
-      color: #fff;
-      border: none;
-      padding: 0.7rem 1.2rem;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .sib-default-btn:hover {
-      background-color: #222;
-    }
-
-    .sib-form {
-      display: flex;
-      flex-direction: column;
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #111;
+      margin-bottom: 1.5rem;
     }
 
     .entry__field {
@@ -64,43 +40,68 @@
     }
 
     .entry__label {
-      font-weight: bold;
+      display: block;
+      font-weight: 600;
       margin-bottom: 0.3rem;
+      font-size: 0.9rem;
     }
 
-    .legal__text {
-      font-size: 0.75rem;
+    input[type="text"],
+    input[type="email"] {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 100%;
+      font-size: 0.95rem;
+    }
+
+    .entry__checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.8rem;
       color: #555;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .sib-default-btn {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .sib-default-btn:hover {
+      background-color: #222;
     }
   </style>
 </head>
 <body>
-
-  <h2>Trage Dich ein und erfahre Neuigkeiten & Events zuerst!</h2>
-
-  <div id="sib-container" class="sib-container">
-    <form id="sib-form" class="sib-form" method="POST" action="https://0ec57b57.sibforms.com/serve/MUIEAFwvK0p1r6WHa8DphGuMMxyLZKuRtDDxBYmEol8eBLfH7pWYiPvUuvg0sUdjDnClT5R1DLI-N7MyBy_A1pkLFgW8oXLC9ZfgItMDTZs_g4MyH4G_4Blw9SP8zGUcTKT3PtFLUuwhRslAq9tWw7wP7Gqt6nBgcdALgN1Ds1u2x7aA">
-      
+  <div id="sib-container">
+    <h2>Trage Dich ein und erfahre Neuigkeiten & Events zuerst!</h2>
+    <form action="https://api.brevo.com/v3/contacts" method="POST">
       <div class="entry__field">
-        <label class="entry__label" for="FIRSTNAME">Dein Vorname:</label>
-        <input type="text" id="FIRSTNAME" name="FIRSTNAME" required />
+        <label class="entry__label" for="Vorname">Dein Vorname:</label>
+        <input type="text" id="Vorname" name="Vorname" required />
       </div>
-
       <div class="entry__field">
-        <label class="entry__label" for="EMAIL">Deine E-Mail-Adresse:</label>
-        <input type="email" id="EMAIL" name="EMAIL" required />
+        <label class="entry__label" for="Email">Deine E-Mail-Adresse:</label>
+        <input type="email" id="Email" name="Email" required />
       </div>
-
-      <div class="entry__field">
-        <input type="checkbox" id="CONSENT" name="CONSENT" required />
-        <label for="CONSENT" class="legal__text">
+      <div class="entry__checkbox">
+        <input type="checkbox" id="einwilligung" name="einwilligung" required />
+        <label for="einwilligung">
           Ich willige ein, dass mir Informationen zum Amperstrand, Öffnungszeiten, dem gastronomischen Angebot und zukünftigen Events per E-Mail gesendet werden. Ich kann mich jederzeit abmelden.
         </label>
       </div>
-
       <button class="sib-default-btn" type="submit">ANMELDEN</button>
     </form>
   </div>
-
 </body>
 </html>
