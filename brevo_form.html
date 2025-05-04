@@ -1,104 +1,83 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Newsletter Formular</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Roboto', sans-serif;
-        background: white;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Newsletter Formular</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 1rem;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #000;
+      display: flex;
+      justify-content: center;
+    }
 
-      .wrapper {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        box-sizing: border-box;
-      }
+    .wrapper {
+      width: 100%;
+      max-width: 520px;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
 
-      h2 {
-        font-size: 20px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 24px;
-      }
+    .sib-form {
+      margin: 0;
+    }
 
-      label {
-        display: block;
-        font-size: 14px;
-        margin: 12px 0 4px;
-        text-align: left;
-      }
+    /* Optional – Buttons & Inputs schöner machen */
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
 
-      input[type="text"],
-      input[type="email"] {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-      }
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
 
-      input[type="checkbox"] {
-        margin-right: 6px;
-      }
+    button, input[type="submit"] {
+      background: #000;
+      color: white;
+      padding: 12px 18px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s;
+    }
 
-      .checkbox-label {
-        font-size: 12px;
-        text-align: left;
-        margin-top: 12px;
-      }
+    button:hover, input[type="submit"]:hover {
+      background: #333;
+    }
 
-      button {
-        margin-top: 20px;
-        width: 100%;
-        background-color: #060606;
-        color: #fff;
-        font-size: 16px;
-        font-weight: bold;
-        border: none;
-        padding: 12px;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-
-      @media (max-width: 600px) {
-        .wrapper {
-          padding: 20px 16px;
-        }
-      }
-    </style>
-    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
-  </head>
-
-  <body>
-    <div class="wrapper">
-      <form method="POST" action="https://sibforms.com/serve/MUIFAOCQRWpZUqGB4RWisjXgIrydlWpYvMY3q2R4fBrRERIGeY1oXFxJhXepD5jvMmAxGzabgi_X58tQllJ0b7kf8KQqP5yVylQq_zhiEvKfnufHvHAjf2H5Xnj-Pk8VfDfqEEQvJwAXxFRwIyH0Ja10-2O0lQlcAXU18mZTmvgpvyCjLE5NHMi7PHJFQ8wacYRiYzKDpEBLmb-o">
-        <h2>Trage Dich ein und erfahre Neuigkeiten & Events zuerst!</h2>
-
-        <label for="VORNAME">Dein Vorname:</label>
-        <input type="text" name="VORNAME" id="VORNAME" placeholder="Maximilian" />
-
-        <label for="EMAIL">Deine E-Mail-Adresse:</label>
-        <input type="email" name="EMAIL" id="EMAIL" placeholder="dein@email.de" required />
-
-        <div class="checkbox-label">
-          <label>
-            <input type="checkbox" name="OPT_IN" required />
-            Ich willige ein, dass mir Informationen zum Amperstrand, Öffnungszeiten, dem gastronomischen Angebot und zukünftigen Events per E-Mail gesendet werden. Ich kann mich jederzeit abmelden.
-          </label>
-        </div>
-
-        <button type="submit">ANMELDEN</button>
-
-        <input type="hidden" name="locale" value="de">
-        <input type="text" name="email_address_check" value="" style="display:none;">
-      </form>
+    .headline {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="sib-form">
+      <p class="headline">Trage Dich ein und erfahre Neuigkeiten & Events zuerst!</p>
+      <!-- Dein echter Brevo-Form-Code: -->
+      <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
+      <div class="sib-form-container" data-type="subscription">
+        <!-- Hier 1:1 den Embed-Code von Brevo einfügen -->
+        <!-- ... -->
+      </div>
     </div>
-    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-  </body>
+  </div>
+</body>
 </html>
