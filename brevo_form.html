@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Newsletter Formular</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter Formular</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        min-height: 100vh;
+        background: #ffffff;
+      }
 
-    .form-wrapper {
-      width: 100%;
-      max-width: 540px;
-      padding: 1rem;
-      box-sizing: border-box;
-      background: white;
-      border-radius: 12px;
-    }
+      #sib-container {
+        width: 100%;
+        max-width: 500px;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
 
-    .headline {
-      font-weight: 700;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <div class="form-wrapper">
-    <div class="headline">
-      Trage Dich ein und erfahre Neuigkeiten & Events zuerst!
+      iframe, form {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Brevo Formular Start -->
+    <div id="sib-container" class="sib-form-container" data-type="subscription">
+      <div id="sib-form-container" class="sib-form">
+        <!-- ⬇️ Deinen vollständigen HTML-Code von Brevo hier einsetzen ⬇️ -->
+
+        <div id="sib-form" style="padding: 0">
+          <form method="POST" action="https://bcbd.sibforms.com/serve/MUIFAKnzmhz…" data-type="subscription">
+            <h2>Trage Dich ein und erfahre Neuigkeiten & Events zuerst!</h2>
+            <input type="text" name="FNAME" placeholder="Dein Vorname" required />
+            <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" required />
+            <div>
+              <input type="checkbox" id="consent" required />
+              <label for="consent">Ich willige ein, dass mir Informationen zum Amperstrand, Öffnungszeiten und Events per E-Mail gesendet werden. Ich kann mich jederzeit abmelden.</label>
+            </div>
+            <button type="submit">ANMELDEN</button>
+          </form>
+        </div>
+
+        <!-- ⬆️ Oder den echten von Brevo → einfach hier einfügen ⬆️ -->
+      </div>
     </div>
-
-    <!-- Brevo Embed (nicht verändern!) -->
     <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
-    <div class="sib-form-container" data-type="subscription">
-      <!-- Füge hier deinen originalen Brevo-Code ein -->
-    </div>
-  </div>
-</body>
+    <!-- Brevo Formular Ende -->
+  </body>
 </html>
