@@ -1,56 +1,106 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Newsletter Formular</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        min-height: 100vh;
-        background: #ffffff;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Newsletter Anmeldung</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background-color: #ffffff;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-      #sib-container {
-        width: 100%;
-        max-width: 500px;
-        padding: 1rem;
-        box-sizing: border-box;
-      }
+    h2 {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
 
-      iframe, form {
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Brevo Formular Start -->
-    <div id="sib-container" class="sib-form-container" data-type="subscription">
-      <div id="sib-form-container" class="sib-form">
-        <!-- ⬇️ Deinen vollständigen HTML-Code von Brevo hier einsetzen ⬇️ -->
+    #sib-container {
+      max-width: 480px;
+      width: 100%;
+    }
 
-        <div id="sib-form" style="padding: 0">
-          <form method="POST" action="https://bcbd.sibforms.com/serve/MUIFAKnzmhz…" data-type="subscription">
-            <h2>Trage Dich ein und erfahre Neuigkeiten & Events zuerst!</h2>
-            <input type="text" name="FNAME" placeholder="Dein Vorname" required />
-            <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" required />
-            <div>
-              <input type="checkbox" id="consent" required />
-              <label for="consent">Ich willige ein, dass mir Informationen zum Amperstrand, Öffnungszeiten und Events per E-Mail gesendet werden. Ich kann mich jederzeit abmelden.</label>
-            </div>
-            <button type="submit">ANMELDEN</button>
-          </form>
-        </div>
+    input, label {
+      font-size: 0.9rem;
+    }
 
-        <!-- ⬆️ Oder den echten von Brevo → einfach hier einfügen ⬆️ -->
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .sib-default-btn {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .sib-default-btn:hover {
+      background-color: #222;
+    }
+
+    .sib-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .entry__field {
+      margin-bottom: 1rem;
+    }
+
+    .entry__label {
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+    }
+
+    .legal__text {
+      font-size: 0.75rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Trage Dich ein und erfahre Neuigkeiten & Events zuerst!</h2>
+
+  <div id="sib-container" class="sib-container">
+    <form id="sib-form" class="sib-form" method="POST" action="https://0ec57b57.sibforms.com/serve/MUIEAFwvK0p1r6WHa8DphGuMMxyLZKuRtDDxBYmEol8eBLfH7pWYiPvUuvg0sUdjDnClT5R1DLI-N7MyBy_A1pkLFgW8oXLC9ZfgItMDTZs_g4MyH4G_4Blw9SP8zGUcTKT3PtFLUuwhRslAq9tWw7wP7Gqt6nBgcdALgN1Ds1u2x7aA">
+      
+      <div class="entry__field">
+        <label class="entry__label" for="FIRSTNAME">Dein Vorname:</label>
+        <input type="text" id="FIRSTNAME" name="FIRSTNAME" required />
       </div>
-    </div>
-    <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
-    <!-- Brevo Formular Ende -->
-  </body>
+
+      <div class="entry__field">
+        <label class="entry__label" for="EMAIL">Deine E-Mail-Adresse:</label>
+        <input type="email" id="EMAIL" name="EMAIL" required />
+      </div>
+
+      <div class="entry__field">
+        <input type="checkbox" id="CONSENT" name="CONSENT" required />
+        <label for="CONSENT" class="legal__text">
+          Ich willige ein, dass mir Informationen zum Amperstrand, Öffnungszeiten, dem gastronomischen Angebot und zukünftigen Events per E-Mail gesendet werden. Ich kann mich jederzeit abmelden.
+        </label>
+      </div>
+
+      <button class="sib-default-btn" type="submit">ANMELDEN</button>
+    </form>
+  </div>
+
+</body>
 </html>
