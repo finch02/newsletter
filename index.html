@@ -5,116 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>amperstrand Newsletter</title>
 
-  <!-- Brevo Styles & Fonts -->
-  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    @font-face {
-      font-display: block;
-      font-family: Roboto;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
-           url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
-    }
-
-    @font-face {
-      font-display: fallback;
-      font-family: Roboto;
-      font-weight: 600;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
-           url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
-    }
-
-    @font-face {
-      font-display: fallback;
-      font-family: Roboto;
-      font-weight: 700;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
-           url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      padding: 0;
-      font-family: system-ui, sans-serif;
-      background-color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
       display: flex;
       justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    #sib-container {
-      margin: 2rem auto;
+    .newsletter-container {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+      max-width: 480px;
       width: 100%;
-      max-width: 600px;
+      text-align: center;
+    }
+
+    .newsletter-container h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .newsletter-container p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    input {
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.75rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #222;
     }
   </style>
 </head>
 <body>
 
-  <!-- Brevo Formular Start -->
-  <div class="sib-form" style="text-align: center; background-color: #fad02c;">
-    <div id="sib-form-container" class="sib-form-container">
-      <div id="error-message" class="sib-form-message-panel" style="display: none;"></div>
-      <div id="success-message" class="sib-form-message-panel" style="display: none;"></div>
-      <div id="sib-container" class="sib-container--large sib-container--vertical" style="background-color: rgba(250,208,44,1); border-radius: 3px;">
-        <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIFAKwSl5LP8eStRnJ-HmNz1MObIoFtwgj-Q6_CR5vYkBDZbD9vwSxwAaaEKWZta7mbMmJCKIIvzX54dKsPvhuadXhbWTV5Cbcb2y2gN634_HmsfS3SJQvjjIHGeWMaJgKbmnv6S6EiS62CbzbUHKkMDtxvr9WS-I1tcAwbuLxrjlryaPRrmeC9XkMHvPfTVfQZGdITgWxj4N3s" data-type="subscription">
-          
-          <div style="padding: 8px 0;">
-            <img src="https://img.mailinblue.com/8962982/images/content_library/original/67e16daa29ce3a5314099459.png" style="width: 100%; max-width: 500px;" alt="amperstrand logo" />
-          </div>
+  <div class="newsletter-container">
+    <h2>Melde Dich für den Newsletter an</h2>
+    <p>Erfahre als Erste:r von Events, Aktionen<br>und Neuigkeiten rund um den amperstand!</p>
 
-          <div style="padding: 8px 0;">
-            <p style="font-size: 20px; font-weight: 700;">ERFAHRE ALS ERSTES, WENN WIR ÖFFNEN!</p>
-            <p style="font-size: 16px;">
-              Trag Dich ein, um benachrichtigt zu werden, wenn wir starten – und verpasse keine Events, Aktionen oder Sommer-Vibes mehr!
-            </p>
-          </div>
-
-          <div style="padding: 8px 0;">
-            <label for="VORNAME" style="font-weight: 700;">Dein Vorname:</label><br />
-            <input type="text" id="VORNAME" name="VORNAME" placeholder="Maximilian" style="width: 100%; padding: 0.5rem;" />
-          </div>
-
-          <div style="padding: 8px 0;">
-            <label for="EMAIL" style="font-weight: 700;">Deine E-Mail-Adresse:</label><br />
-            <input type="email" id="EMAIL" name="EMAIL" placeholder="max@example.de" required style="width: 100%; padding: 0.5rem;" />
-          </div>
-
-          <div style="padding: 8px 0; text-align: left;">
-            <label>
-              <input type="checkbox" id="OPT_IN" name="OPT_IN" required />
-              <small>Ich stimme dem Empfang von Infos rund um den Amperstrand zu. Ich kann mich jederzeit abmelden.</small>
-            </label>
-          </div>
-
-          <div style="padding: 8px 0;">
-            <button type="submit" style="font-size: 18px; padding: 0.75rem 2rem; background: black; color: white; border: none; border-radius: 4px;">Jetzt anmelden</button>
-          </div>
-
-          <input type="text" name="email_address_check" value="" style="display:none;">
-          <input type="hidden" name="locale" value="de">
-        </form>
-      </div>
-    </div>
+    <form method="POST" action="https://sibforms.com/serve/MUIFAKwSl5LP8eStRnJ-HmNz1MObIoFtwgj-Q6_CR5vYkBDZbD9vwSxwAaaEKWZta7mbMmJCKIIvzX54dKsPvhuadXhbWTV5Cbcb2y2gN634_HmsfS3SJQvjjIHGeWMaJgKbmnv6S6EiS62CbzbUHKkMDtxvr9WS-I1tcAwbuLxrjlryaPRrmeC9XkMHvPfTVfQZGdITgWxj4N3s">
+      <input type="text" name="VORNAME" placeholder="Vorname">
+      <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" required>
+      <button type="submit">Jetzt anmelden</button>
+    </form>
   </div>
-  <!-- Brevo Formular Ende -->
-
-  <!-- Brevo Scripts -->
-  <script>
-    window.REQUIRED_CODE_ERROR_MESSAGE = 'Wähle bitte einen Ländervorwahl aus.';
-    window.LOCALE = 'de';
-    window.EMAIL_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig.";
-    window.REQUIRED_ERROR_MESSAGE = "Dieses Feld darf nicht leer sein.";
-    window.GENERIC_INVALID_MESSAGE = "Ungültige Eingabe, bitte prüfen.";
-    window.translation = {
-      common: {
-        selectedList: '{quantity} Liste ausgewählt',
-        selectedLists: '{quantity} Listen ausgewählt',
-        selectedOption: '{quantity} ausgewählt',
-        selectedOptions: '{quantity} ausgewählt',
-      }
-    };
-    var AUTOHIDE = Boolean(0);
-  </script>
-  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 </body>
 </html>
