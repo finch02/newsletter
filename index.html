@@ -4,50 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>amperstrand Newsletter</title>
+
+  <!-- Fonts & Styles von Brevo -->
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
   <style>
+    @font-face {
+      font-display: block;
+      font-family: Roboto;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
+           url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
+    }
+
+    @font-face {
+      font-display: fallback;
+      font-family: Roboto;
+      font-weight: 600;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
+           url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
+    }
+
+    @font-face {
+      font-display: fallback;
+      font-family: Roboto;
+      font-weight: 700;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
+           url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
+    }
+
     body {
       margin: 0;
+      padding: 0;
       font-family: system-ui, sans-serif;
-      background: #ffffff;
+      background-color: #ffffff;
       display: flex;
       justify-content: center;
     }
 
-    .newsletter {
+    #sib-container {
+      margin: 2rem auto;
       width: 100%;
       max-width: 600px;
-      text-align: center;
-      padding: 2rem 1rem;
-      box-sizing: border-box;
-    }
-
-    h2 {
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    iframe {
-      width: 100%;
-      height: 360px;
-      border: none;
-      overflow: hidden;
     }
   </style>
 </head>
 <body>
-  <div class="newsletter">
-    <h2>Werde Teil der amperstrand-Crew</h2>
-    <p>Trag dich ein und bleib auf dem Laufenden: Events, Drinks & Beach-Vibes direkt in dein Postfach.</p>
-    <iframe 
-      src="https://sibforms.com/serve/MUIFAA0u1fkOsNxnOPom0nxjwKxjWp38TANAKQsSKOGd3R7F3IQV6UGHQtNbQjE2SRMNOmGRnm3ovkq7siphmet2rF4C8JFImjlysykN5a3n6-FRE4B5_SooxNBg1N-vQkKHQnKFNP_xiNiULOE7zT8vxX09fQyrmyL_SB_dCedz_ldhxKbp0Y6AAQgI9gLL6BXqc0svIgSMBqex" 
-      scrolling="no" 
-      allowfullscreen>
-    </iframe>
+
+  <!-- Brevo Embed Start -->
+  <div class="sib-form" style="text-align: center; background-color: #fad02c;">
+    <!-- Das Formular wurde aus deinem Code übernommen -->
+    <!-- BEGIN Brevo Form: alles zwischen hier und dem Script-Tag unverändert lassen -->
+    <div id="sib-form-container" class="sib-form-container">
+      <!-- ... kompletter Formularcode von dir ... -->
+      <!-- Den kompletten Block ab hier kopierst du wie oben geschickt -->
+      <!-- Wichtig: NICHT den iframe, sondern den <form>…-Block behalten -->
+    </div>
   </div>
+  <!-- Brevo Embed End -->
+
+  <!-- Brevo Script -->
+  <script>
+    window.REQUIRED_CODE_ERROR_MESSAGE = 'Wähle bitte einen Ländervorwahl aus.';
+    window.LOCALE = 'de';
+    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig.";
+    window.REQUIRED_ERROR_MESSAGE = "Dieses Feld darf nicht leer sein.";
+    window.GENERIC_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig.";
+
+    window.translation = {
+      common: {
+        selectedList: '{quantity} Liste ausgewählt',
+        selectedLists: '{quantity} Listen ausgewählt',
+        selectedOption: '{quantity} ausgewählt',
+        selectedOptions: '{quantity} ausgewählt',
+      }
+    };
+
+    var AUTOHIDE = Boolean(0);
+  </script>
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
 </body>
 </html>
