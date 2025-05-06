@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Newsletter Anmeldung</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .newsletter-box {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      flex: 1 1 60%;
+      min-width: 240px;
+    }
+
+    button {
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #f4c721;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="newsletter-box">
+    <h2>Melde Dich für den Newsletter an</h2>
+    <p>Erfahre als Erste:r von Events, Aktionen und Neuigkeiten rund um den amperstrand!</p>
+    <form action="#" method="POST">
+      <input type="text" name="vorname" placeholder="Vorname" required />
+      <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required />
+      <button type="submit">Jetzt anmelden</button>
+    </form>
+  </div>
+</body>
+</html>
