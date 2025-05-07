@@ -1,69 +1,59 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Newsletter Anmeldung</title>
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        font-family: Helvetica, sans-serif;
-        background: #ffffff;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newsletter Anmeldung</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica, sans-serif;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
 
-      .container {
-        max-width: 540px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-      }
+    .container {
+      max-width: 540px;
+      width: 100%;
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
 
-      .title {
-        font-size: 1.8rem;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 0.5rem;
-      }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
 
-      .subtitle {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 1rem;
-        color: #333;
-      }
+    p {
+      font-size: 1rem;
+      color: #222;
+      margin-bottom: 24px;
+    }
 
-      iframe {
-        width: 100%;
-        border: none;
-        overflow: hidden;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="title">Melde Dich für den Newsletter an</div>
-      <div class="subtitle">
-        Erfahre als Erste:r von Events, Aktionen und Neuigkeiten rund um den amperstrand!
-      </div>
+    iframe {
+      width: 100%;
+      height: 580px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Melde dich für den Newsletter an</h2>
+    <p>Erfahre als Erstes von Events, Aktionen und Sommer-Vibes rund um den amperstrand!</p>
 
-      <!-- Brevo Embed -->
-      <iframe
-        src="https://sibforms.com/serve/MUIFALfm4lae-OIqPRAlf0dxd70tyz25R-sT1mzlHIgRo-As4YkzJwv7lc5-w5YLtmBc41XPPi9SCfVlLvke2UorJ67B4q4sSE-ItCHqaqO8M3QbgFE_GgmRCTeeXayrGE5Q39NvrF6wPFJqETaCE0_wUvA17xVEcHj5W_BUOLYbfzrOZT8dqjsls_6jvOKwCAbWRLgP2_QgddW2"
-        id="brevo-embed"
-        scrolling="no"
-        frameborder="0"
-        style="width: 100%;"
-      ></iframe>
-    </div>
-
-    <script>
-      function sendHeight() {
-        const height = document.body.scrollHeight;
-        window.parent.postMessage({ type: "setHeight", height }, "*");
-      }
-
-      window.addEventListener("load", sendHeight);
-      window.addEventListener("resize", sendHeight);
-    </script>
-  </body>
+    <iframe
+      src="https://sibforms.com/serve/MUIFALfm4lae-OIqPRAlf0dxd70tyz25R-sT1mzlHIgRo-As4YkzJwv7lc5-w5YLtmBc41XPPi9SCfVlLvke2UorJ67B4q4sSE-ItCHqaqO8M3QbgFE_GgmRCTeeXayrGE5Q39NvrF6wPFJqETaCE0_wUvA17xVEcHj5W_BUOLYbfzrOZT8dqjsls_6jvOKwCAbWRLgP2_QgddW2"
+      allowfullscreen
+      scrolling="no"
+      title="Brevo Newsletter Anmeldung"
+    ></iframe>
+  </div>
+</body>
 </html>
