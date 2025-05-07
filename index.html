@@ -3,54 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Newsletter | Amperstrand</title>
+  <title>Newsletter Anmeldung</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #fdfdfd;
-      font-family: Helvetica, sans-serif;
+    body {
+      font-family: sans-serif;
       display: flex;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      align-items: center;
+      padding: 2rem;
+      background-color: #f9f9f9;
     }
-
     .form-wrapper {
       background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      max-width: 600px;
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 500px;
       width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     }
-
-    iframe {
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      margin: 0.75rem 0 0.25rem;
+    }
+    input[type="text"],
+    input[type="email"] {
       width: 100%;
-      height: 650px;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+    .checkbox-text {
+      font-size: 0.8rem;
+      line-height: 1.3;
+      color: #333;
+    }
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 1rem;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
       border: none;
-      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
     }
-
-    @media (max-width: 600px) {
-      .form-wrapper {
-        padding: 20px;
-        border-radius: 8px;
-      }
-
-      iframe {
-        height: 700px;
-      }
+    button:hover {
+      background-color: #222;
     }
   </style>
 </head>
 <body>
   <div class="form-wrapper">
-    <iframe 
-      src="https://sibforms.com/serve/MUIFALfm4lae-OIqPRAlf0dxd70tyz25R-sT1mzlHIgRo-As4YkzJwv7lc5-w5YLtmBc41XPPi9SCfVlLvke2UorJ67B4q4sSE-ItCHqaqO8M3QbgFE_GgmRCTeeXayrGE5Q39NvrF6wPFJqETaCE0_wUvA17xVEcHj5W_BUOLYbfzrOZT8dqjsls_6jvOKwCAbWRLgP2_QgddW2" 
-      allowfullscreen 
-      scrolling="no">
-    </iframe>
+    <h2>Melde dich für den Newsletter an</h2>
+    <p>Erfahre als Erstes von Events, Aktionen und Sommer-Vibes rund um den amperstrand!</p>
+    <form action="https://sibforms.com/serve/MUIFALfm4lae-OIqPRAlf0dxd70tyz25R-sT1mzlHIgRo-As4YkzJwv7lc5-w5YLtmBc41XPPi9SCfVlLvke2UorJ67B4q4sSE-ItCHqaqO8M3QbgFE_GgmRCTeeXayrGE5Q39NvrF6wPFJqETaCE0_wUvA17xVEcHj5W_BUOLYbfzrOZT8dqjsls_6jvOKwCAbWRLgP2_QgddW2" method="POST">
+      <label for="VORNAME">Dein Vorname</label>
+      <input type="text" id="VORNAME" name="VORNAME" required placeholder="Maximilian" />
+
+      <label for="EMAIL">Deine E-Mail-Adresse</label>
+      <input type="email" id="EMAIL" name="EMAIL" required placeholder="max@example.com" />
+
+      <label class="checkbox-text">
+        <input type="checkbox" name="OPT_IN" required />
+        Ich stimme zu, E-Mails rund um den Amperstrand zu erhalten und bin mit der Verarbeitung meiner Daten einverstanden.
+      </label>
+
+      <button type="submit">Jetzt anmelden</button>
+    </form>
   </div>
 </body>
 </html>
