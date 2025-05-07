@@ -3,93 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amperstrand Newsletter</title>
+  <title>Newsletter | Amperstrand</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      background: #fdfdfd;
       font-family: Helvetica, sans-serif;
-      background-color: #fdfdfd;
       display: flex;
-      justify-content: center;
       align-items: center;
-      padding: 60px 20px;
+      justify-content: center;
+      min-height: 100vh;
     }
 
     .form-wrapper {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
       max-width: 600px;
       width: 100%;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-      border-radius: 12px;
-      padding: 32px;
-      background: white;
+    }
+
+    iframe {
+      width: 100%;
+      height: 650px;
+      border: none;
+      overflow: hidden;
+    }
+
+    @media (max-width: 600px) {
+      .form-wrapper {
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      iframe {
+        height: 700px;
+      }
     }
   </style>
-
-  <!-- Brevo Styles + Fonts -->
-  <style>
-    @font-face {
-      font-display: block;
-      font-family: Roboto;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
-           url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
-    }
-
-    @font-face {
-      font-display: fallback;
-      font-family: Roboto;
-      font-weight: 600;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
-           url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
-    }
-
-    @font-face {
-      font-display: fallback;
-      font-family: Roboto;
-      font-weight: 700;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
-           url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
-    }
-
-    #sib-container input::placeholder,
-    #sib-container textarea::placeholder {
-      text-align: left;
-      font-family: Helvetica, sans-serif;
-      color: #c0ccda;
-    }
-
-    #sib-container a {
-      text-decoration: underline;
-      color: #2BB2FC;
-    }
-  </style>
-  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
 </head>
-
 <body>
   <div class="form-wrapper">
-    <!-- ⬇️ Füge hier einfach deinen Brevo-Formular-HTML ein ⬇️ -->
-    <!-- BEGIN Brevo Form -->
-    <!-- 🟡 DEIN GANZER BREVO CODE kommt hier rein – also alles von <div class="sib-form"... bis zum letzten <script> -->
-    <!-- END Brevo Form -->
+    <iframe 
+      src="https://sibforms.com/serve/MUIFALfm4lae-OIqPRAlf0dxd70tyz25R-sT1mzlHIgRo-As4YkzJwv7lc5-w5YLtmBc41XPPi9SCfVlLvke2UorJ67B4q4sSE-ItCHqaqO8M3QbgFE_GgmRCTeeXayrGE5Q39NvrF6wPFJqETaCE0_wUvA17xVEcHj5W_BUOLYbfzrOZT8dqjsls_6jvOKwCAbWRLgP2_QgddW2" 
+      allowfullscreen 
+      scrolling="no">
+    </iframe>
   </div>
-
-  <!-- Scripts für Brevo -->
-  <script>
-    window.REQUIRED_CODE_ERROR_MESSAGE = 'Wähle bitte einen Ländervorwahl aus.';
-    window.LOCALE = 'de';
-    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfe das Feldformat und versuche es erneut.";
-    window.REQUIRED_ERROR_MESSAGE = "Dieses Feld darf nicht leer sein.";
-    window.GENERIC_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfe das Feldformat und versuche es erneut.";
-    window.translation = {
-      common: {
-        selectedList: '{quantity} Liste ausgewählt',
-        selectedLists: '{quantity} Listen ausgewählt',
-        selectedOption: '{quantity} ausgewählt',
-        selectedOptions: '{quantity} ausgewählt',
-      }
-    };
-    var AUTOHIDE = Boolean(0);
-  </script>
-  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body>
 </html>
